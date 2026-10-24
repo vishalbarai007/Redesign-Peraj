@@ -65,9 +65,10 @@ export const OfferingsGrid: React.FC = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+      const firstCard = scrollContainerRef.current.querySelector<HTMLElement>(".snap-start");
+      const cardWidth = firstCard ? firstCard.offsetWidth + 24 : 380;
       scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
+        left: direction === "left" ? -cardWidth : cardWidth,
         behavior: "smooth",
       });
     }

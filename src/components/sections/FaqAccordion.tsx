@@ -17,8 +17,8 @@ export const FaqAccordion: React.FC = () => {
       <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#007F73]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
+        {/* Header (Left-aligned as requested) */}
+        <div className="text-left mb-14 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-white/10 text-white text-xs font-semibold uppercase tracking-wider mb-4">
             <HelpCircle className="w-3.5 h-3.5 text-[#007F73]" />
             <span>Advisory Clarity</span>
@@ -26,12 +26,12 @@ export const FaqAccordion: React.FC = () => {
           <h2 className="text-3xl sm:text-5xl font-forum text-white leading-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-sm text-slate-300 mt-3 max-w-xl mx-auto font-sans">
+          <p className="text-sm text-slate-300 mt-3 font-sans">
             Direct answers on switching brokers, independent policy audits, and our claims defense process.
           </p>
         </div>
 
-        {/* Dark Enterprise Accordion */}
+        {/* Dark Enterprise Accordion with Smooth Height Animation */}
         <div className="space-y-4">
           {faqsData.map((faq, index) => {
             const isOpen = openId === faq.id;
@@ -65,17 +65,24 @@ export const FaqAccordion: React.FC = () => {
                       isOpen ? "rotate-180 bg-[#007F73] border-[#007F73]" : ""
                     }`}
                   >
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4 transition-transform duration-300" />
                   </div>
                 </button>
 
-                {isOpen && (
-                  <div className="px-6 sm:px-8 pb-6 pt-2 border-t border-white/10 animate-in fade-in duration-200">
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans pl-8 sm:pl-12">
-                      {faq.answer}
-                    </p>
+                {/* CSS Grid Smooth Height Expansion */}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 sm:px-8 pb-6 pt-2 border-t border-white/10">
+                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans pl-8 sm:pl-12">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

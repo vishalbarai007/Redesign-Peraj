@@ -6,8 +6,8 @@ export const ProcessSection: React.FC = () => {
   return (
     <section id="process" className="py-20 lg:py-28 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        {/* Section Header (Left-aligned) */}
+        <div className="text-left max-w-2xl mb-16">
           <span className="text-xs uppercase tracking-widest font-semibold text-[#007F73] block mb-2">
             Transparent Engagement
           </span>

@@ -58,16 +58,16 @@ export const HeritageTimeline: React.FC = () => {
 
   return (
     <section id="heritage" className="w-full bg-[#001D2D] relative overflow-hidden py-20 lg:py-28">
-      {/* Background Visual Layer using authentic legacy.jpg */}
-      <div className="absolute inset-0 z-0 opacity-40">
+      {/* Background Visual Layer using clear corporate handshake deal image */}
+      <div className="absolute inset-0 z-0 opacity-35">
         <Image
-          src="/legacy.jpg"
-          alt="Peraj Insurance Heritage Archive"
+          src="/handshake-deal.jpg"
+          alt="Peraj Corporate Advisory Partnership"
           fill
-          className="object-cover object-center filter grayscale contrast-125"
+          className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#001D2D] via-[#001D2D]/80 to-[#001D2D]/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#001D2D] via-[#001D2D]/75 to-[#001D2D]/85" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,7 +102,7 @@ export const HeritageTimeline: React.FC = () => {
             </p>
           </div>
 
-          {/* Navigation Controls */}
+          {/* Navigation Controls (Counter removed as requested) */}
           <div className="flex items-center gap-4 pt-8">
             <button
               type="button"
@@ -121,10 +121,6 @@ export const HeritageTimeline: React.FC = () => {
             >
               <ChevronRight className="w-5 h-5" />
             </button>
-
-            <div className="text-xs uppercase tracking-widest text-slate-400 font-mono ml-2">
-              0{activeIndex + 1} / 0{MILESTONES.length}
-            </div>
           </div>
         </div>
 

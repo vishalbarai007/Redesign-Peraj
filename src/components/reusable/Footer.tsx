@@ -1,24 +1,24 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { siteConfig } from "@/data/siteConfig";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-[#102A43] text-white pt-16 pb-12 border-t border-slate-800">
+    <footer className="w-full bg-[#001D2D] text-white pt-16 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-slate-700/80">
-          {/* Col 1: Identity & Legacy */}
-          <div className="md:col-span-2 space-y-4">
-            <div className="relative h-10 w-44">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-slate-800">
+          {/* Col 1: Identity & Legacy with Big Peraj Logo */}
+          <div className="md:col-span-2 space-y-5">
+            <div className="relative h-14 w-52 sm:h-16 sm:w-64">
               <Image
                 src="/footerLogo.png"
                 alt="Peraj Insurance Logo"
                 fill
                 className="object-contain object-left brightness-0 invert"
+                priority
               />
             </div>
-            <p className="text-slate-300 text-sm max-w-md leading-relaxed">
+            <p className="text-slate-300 text-sm max-w-md leading-relaxed font-sans">
               Founded in 1951 by Shri Mulji Peraj. Over seven decades of fiduciary commercial risk advisory, direct corporate insurance broking, and resolute claims advocacy.
             </p>
             <div className="text-xs text-slate-400 space-y-1 pt-2">
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 3: Direct Contact */}
+          {/* Col 3: Direct Contact with Authentic OG Social Icons */}
           <div>
             <h4 className="text-xs uppercase tracking-widest text-[#B58B45] font-bold mb-4">
               Direct Inquiries
@@ -72,24 +72,38 @@ export const Footer: React.FC = () => {
                   {siteConfig.email}
                 </a>
               </div>
-              <div className="pt-2 flex items-center gap-3">
+
+              {/* Official Brand Colored Social Icons */}
+              <div className="pt-3 flex items-center gap-3">
                 <a
                   href={siteConfig.socials.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-slate-800 hover:bg-[#007F73] flex items-center justify-center transition-colors"
+                  className="w-10 h-10 rounded-xl overflow-hidden hover:scale-105 active:scale-95 transition-transform duration-200 shadow-md flex items-center justify-center bg-transparent"
                   aria-label="Peraj LinkedIn"
                 >
-                  <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} className="invert" />
+                  <Image
+                    src="/icons/linkedin-og.svg"
+                    alt="LinkedIn"
+                    width={36}
+                    height={36}
+                    className="w-9 h-9 object-contain"
+                  />
                 </a>
                 <a
                   href={siteConfig.socials.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-slate-800 hover:bg-[#007F73] flex items-center justify-center transition-colors"
+                  className="w-10 h-10 rounded-xl overflow-hidden hover:scale-105 active:scale-95 transition-transform duration-200 shadow-md flex items-center justify-center bg-transparent"
                   aria-label="Peraj Instagram"
                 >
-                  <Image src="/icons/instagram.svg" alt="Instagram" width={16} height={16} className="invert" />
+                  <Image
+                    src="/icons/instagram-og.svg"
+                    alt="Instagram"
+                    width={36}
+                    height={36}
+                    className="w-9 h-9 object-contain rounded-lg"
+                  />
                 </a>
               </div>
             </div>

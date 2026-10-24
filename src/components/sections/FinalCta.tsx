@@ -11,22 +11,23 @@ export const FinalCta: React.FC = () => {
   return (
     <>
       <section id="contact" className="py-20 lg:py-28 bg-white text-[#102A43] relative overflow-hidden border-t border-slate-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
+          {/* Left-Aligned Header */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm bg-slate-100 text-[#102A43] text-xs font-semibold uppercase tracking-wider mb-6">
             <Shield className="w-3.5 h-3.5 text-[#007F73]" />
             <span>Fiduciary Risk Advisory</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-forum text-[#102A43] leading-tight mb-6">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-forum text-[#102A43] leading-tight mb-6 max-w-3xl">
             Your protection starts with a conversation.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#5B7083] max-w-2xl mx-auto leading-relaxed mb-10 font-sans">
+          <p className="text-base sm:text-lg text-[#5B7083] max-w-2xl leading-relaxed mb-10 font-sans">
             Tell us about your operations. We will review your existing exposures, benchmark policy wordings, and engineer an optimized insurance program.
           </p>
 
-          {/* Action triggers */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Action triggers (Left-Aligned) */}
+          <div className="flex flex-col sm:flex-row items-start justify-start gap-4">
             <button
               type="button"
               onClick={() => setModalOpen(true)}
@@ -45,7 +46,8 @@ export const FinalCta: React.FC = () => {
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-xs text-[#5B7083]">
+          {/* Trust Seals (Left-Aligned) */}
+          <div className="flex flex-wrap items-center justify-start gap-6 mt-12 text-xs text-[#5B7083]">
             <div className="flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-[#007F73]" />
               <span>2-Hour Callback Promise</span>

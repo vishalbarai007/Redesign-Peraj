@@ -65,7 +65,7 @@ export const TrustStrip: React.FC = () => {
           {statsData.map((stat) => (
             <div
               key={stat.id}
-              className="bg-[#F7F8FA] rounded-xl p-8 border border-slate-200/90 shadow-sm card-hover-effect flex flex-col justify-between"
+              className="bg-[#102A43]/[0.05] hover:bg-[#102A43]/[0.12] transition-all duration-300 rounded-xl p-8 border border-[#102A43]/10 hover:border-[#102A43]/25 shadow-sm card-hover-effect flex flex-col justify-between"
             >
               <div>
                 <div className="text-5xl lg:text-6xl font-forum font-light text-[#102A43] tracking-tight mb-3">
@@ -75,7 +75,7 @@ export const TrustStrip: React.FC = () => {
                   {stat.label}
                 </h3>
               </div>
-              <p className="text-xs text-[#5B7083] leading-relaxed pt-4 border-t border-slate-100">
+              <p className="text-xs text-[#5B7083] leading-relaxed pt-4 border-t border-[#102A43]/10">
                 {stat.description}
               </p>
             </div>
