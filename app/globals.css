@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Peraj Established Adviser Theme: Warm Off-White Canvas with Navy & Deep Teal */
+    --background: 220 20% 98%; /* #F7F8FA */
+    --foreground: 207 32% 21%; /* #243746 Charcoal */
+
+    --card: 0 0% 100%; /* #FFFFFF Surface */
+    --card-foreground: 207 32% 21%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 32% 21%;
+
+    /* Primary: Deep Navy */
+    --primary: 210 61% 16%; /* #102A43 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Deep Teal for Action */
+    --secondary: 175 100% 25%; /* #007F73 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 209 18% 44%; /* #5B7083 */
+
+    --accent: 38 46% 49%; /* #B58B45 Muted Gold */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 24% 90%;
+    --input: 214 24% 90%;
+    --ring: 175 100% 25%;
+
+    --radius: 0.5rem;
+
+    /* Peraj Typography */
+    --font-heading: 'Forum', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    color: #243746;
+    background-color: #F7F8FA;
+  }
+  h1, h2, h3, .font-heading, .font-forum {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F4F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #102A43;
+}
+
+/* Plum & Embroker inspired interactive classes */
+.card-hover-effect {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(16, 42, 67, 0.12);
+  border-color: rgba(0, 127, 115, 0.35);
+}
+
+.teal-glow-btn {
+  background-color: #007F73;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px 0 rgba(0, 127, 115, 0.35);
+  transition: all 0.25s ease-in-out;
+}
+.teal-glow-btn:hover {
+  background-color: #00685E;
+  box-shadow: 0 6px 20px rgba(0, 127, 115, 0.5);
+  transform: translateY(-1px);
+}

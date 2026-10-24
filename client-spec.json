@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "archetype": "finance-insurance-landing",
+  "brand": {
+    "name": "Peraj Insurance Brokers",
+    "industry": "Commercial Insurance & Corporate Risk Advisory",
+    "vibe": "established-adviser",
+    "palette": {
+      "primary": "#102A43",
+      "accent": "#007F73",
+      "gold": "#B58B45",
+      "background": "#F7F8FA",
+      "text": "#243746",
+      "surface": "#FFFFFF"
+    },
+    "tagline": "Insurance solutions that understand businesses and the people behind them.",
+    "logoUrl": "/logo.svg",
+    "phone": "+91 22 1234 5678",
+    "email": "info@perajinsurance.co.in",
+    "establishedYear": 1951,
+    "credentials": [
+      "Founded in 1951 (70+ Years of Risk Advisory Legacy)",
+      "99.8% Claims Advocacy & Settlement Satisfaction",
+      "99.5% Enterprise Client Retention Rate",
+      "Global Broker Partnerships Across 40+ Countries",
+      "IRDAI Registered Direct Insurance Broker (Life & General)"
+    ]
+  },
+  "navigation": [
+    { "label": "Why Peraj", "href": "#why-peraj" },
+    { "label": "Risk Solutions", "href": "#solutions" },
+    { "label": "Our Process", "href": "#process" },
+    { "label": "Enterprise Proof", "href": "#proof" },
+    { "label": "FAQs", "href": "#faqs" },
+    { "label": "Request Callback", "href": "#contact" }
+  ],
+  "leadCapture": {
+    "destinations": ["google_sheets", "email", "crm_webhook"],
+    "primaryAction": "Request a Callback",
+    "responseTimePromise": "We respond within 2 business hours",
+    "fields": [
+      "fullName",
+      "phone",
+      "workEmail",
+      "insuranceRequirement",
+      "companyName",
+      "message"
+    ]
+  },
+  "contentSummaries": {
+    "heroHeadline": "Insurance advice built around your business risks.",
+    "heroSubheadline": "Discuss your coverage needs, understand your policy options, and receive independent guidance from India's trusted commercial risk advisory.",
+    "benefitClaims": [
+      "Coverage precisely aligned with your operational exposures",
+      "Transparent policy audits uncovering gaps and cost savings",
+      "Aggressive claims advocacy tested at the moment of loss"
+    ],
+    "coreOfferings": [
+      {
+        "id": "property-assets",
+        "title": "Property & Physical Asset Protection",
+        "description": "Comprehensive catastrophe, fire, and business interruption cover tailored to manufacturing plants and commercial properties."
+      },
+      {
+        "id": "capital-projects",
+        "title": "Capital Projects & Engineering Risk",
+        "description": "Erection all-risk, contractors all-risk, and advance loss of profits for complex infrastructure developments."
+      },
+      {
+        "id": "casualty-liability",
+        "title": "Casualty & Third-Party Liability",
+        "description": "Commercial general liability, product liability, and public liability protecting enterprise balance sheets against third-party actions."
+      },
+      {
+        "id": "management-liability",
+        "title": "Management Liability & Financial Lines",
+        "description": "Directors & Officers (D&O), Errors & Omissions (E&O), and Crime coverage securing board fiduciaries and financial leaders."
+      },
+      {
+        "id": "cyber-infrastructure",
+        "title": "Cyber, Data & Digital Infrastructure",
+        "description": "First-party recovery, extortion response, and regulatory penalty indemnity for modern digital and tech-enabled businesses."
+      },
+      {
+        "id": "human-capital",
+        "title": "Human Capital & Employee Health",
+        "description": "End-to-end Group Health (GMC), Term Life (GTL), and Personal Accident (GPA) with digital claims and dedicated wellness support."
+      }
+    ]
+  }
+}
